@@ -2,10 +2,12 @@
 Create a container DIV on HTML
 Acess that Div and assign a function to multply by x to get all other block divs
 In css edit the block divs to have a grid
+
+parseInt(prompt("Whats your number"));
 */
 
 const container = document.querySelector("#container");
-const gridSize = parseInt(prompt("Whats your number"));
+const gridSize = 16;
 const containerWidth = 500;
 const divSize = containerWidth / gridSize;
 
@@ -13,6 +15,7 @@ function grid(num) {
   let totalgrids = num * num;
   for (let i = 0; i < totalgrids; i++) {
     const myBtn = document.createElement("button");
+    myBtn.className = "gridButton";
     myBtn.style.width = `${divSize}px`;
     myBtn.style.height = `${divSize}px`;
     myBtn.style.border = "1px solid black";
@@ -26,7 +29,7 @@ function grid(num) {
 grid(gridSize);
 
 document.body.addEventListener("mouseover", (e) => {
-  let button = e.target.closest("button");
+  let button = e.target.closest(".gridButton");
   if (!button) {
     return;
   }
@@ -34,7 +37,7 @@ document.body.addEventListener("mouseover", (e) => {
 });
 
 document.body.addEventListener("mouseout", (e) => {
-  let button = e.target.closest("button");
+  let button = e.target.closest(".gridButton");
   if (!button) {
     return;
   }
