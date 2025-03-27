@@ -19,7 +19,3 @@ body {
   height: 500px;
   background-color: aliceblue;
 }
-
-.griditem {
-  box-sizing: border-box;
-}
