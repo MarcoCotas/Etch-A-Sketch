@@ -1,22 +1,25 @@
 * {
   box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
-  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
   background-color: black;
 }
 
 #container {
   display: flex;
-  height: 500px;
+  flex-wrap: wrap;
   width: 500px;
-  margin: 500, 50, 500, 50;
-  border: 2px solid blue;
+  height: 500px;
   background-color: aliceblue;
+}
+
+.griditem {
+  box-sizing: border-box;
 }

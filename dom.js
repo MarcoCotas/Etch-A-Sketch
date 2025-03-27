@@ -5,15 +5,22 @@ In css edit the block divs to have a grid
 */
 
 const container = document.querySelector("#container");
-console.log(container);
+const gridSize = 16;
+const containerWidth = 500;
+const divSize = containerWidth / gridSize;
 
 function grid(num) {
-  let grid = num * num;
-  for (let i = 0; i < grid; i++) {
+  let totalgrids = num * num;
+  for (let i = 0; i < totalgrids; i++) {
     const myDiv = document.createElement("div");
-    myDiv.classList.add("grid-item");
+    myDiv.style.width = `${divSize}px`;
+    myDiv.style.height = `${divSize}px`;
+    myDiv.style.border = "1px solid black";
+    myDiv.style.backgroundColor = "lightblue";
+    myDiv.style.boxSizing = "border-box";
+
+    myDiv.classList.add("griditem");
     container.appendChild(myDiv);
-    console.log(myDiv);
   }
 }
-grid(16);
+grid(gridSize);
