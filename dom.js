@@ -2,6 +2,7 @@ const container = document.querySelector("#container");
 let gridSize = 16;
 const containerWidth = 500;
 const divSize = containerWidth / gridSize;
+const title = document.querySelector(".title");
 
 function getGrid() {
   gridSize = parseInt(prompt("What´s the size of your grid"));
@@ -70,7 +71,7 @@ document.querySelectorAll(".header button").forEach((button) => {
 
       case "Erase":
         document.querySelectorAll(".gridButton").forEach((cell) => {
-          cell.style.backgroundColor = "white"; // Ou a cor inicial desejada
+          cell.style.backgroundColor = "white";
         });
         break;
 
@@ -78,15 +79,21 @@ document.querySelectorAll(".header button").forEach((button) => {
         document.body.style.backgroundImage = "none";
         document.body.style.backgroundColor = "white";
         event.target.textContent = "Dark mode";
+        title.style.color = "black";
+
         break;
       case "Dark mode":
-        document.body.style.backgroundImage = "none";
         document.body.style.backgroundColor = "black";
+        document.body.style.backgroundImage = 'url("/images/party.jpg")';
         event.target.textContent = "Background";
+        title.style.color = "white";
+
         break;
       case "Background":
         document.body.style.backgroundImage = 'url("/images/retro.jpg")';
         event.target.textContent = "Light mode";
+        title.style.color = "yellow";
+
         break;
     }
   });

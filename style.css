@@ -19,11 +19,10 @@ body {
 }
 
 .header {
-  width: 800px;
+  gap: 20px;
+
   display: flex;
-  justify-content: space-between;
   padding: 20px;
-  margin: ;
 }
 
 .menu {
@@ -68,4 +67,20 @@ body {
   font-family: Georgia, "Times New Roman", Times, serif;
 
   font-weight: 700;
+}
+
+#grid-size {
+  background-color: rgb(178, 203, 126);
+}
+
+#clear {
+  background-color: rgb(203, 179, 126);
+}
+
+#erase {
+  background-color: rgb(203, 126, 150);
+}
+
+#mode {
+  background-color: rgb(130, 126, 203);
 }
