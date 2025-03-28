@@ -84,15 +84,15 @@ document.querySelectorAll(".header button").forEach((button) => {
         break;
       case "Dark mode":
         document.body.style.backgroundColor = "black";
-        document.body.style.backgroundImage = 'url("images/party.jpg")';
+        document.body.style.backgroundImage = 'url("./images/party.jpg")';
         event.target.textContent = "Background";
         title.style.color = "white";
 
         break;
       case "Background":
-        document.body.style.backgroundImage = 'url("images/retro.jpg")';
+        document.body.style.backgroundImage = 'url("./images/retro.jpg")';
         event.target.textContent = "Light mode";
-        title.style.color = "yellow";
+        title.style.textContent = "red";
 
         break;
     }
