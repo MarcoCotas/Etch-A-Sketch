@@ -4,16 +4,17 @@ const containerWidth = 500;
 const divSize = containerWidth / gridSize;
 
 function getGrid() {
-  return parseInt(prompt("Qual o tamanho da grade?"));
+  gridSize = parseInt(prompt("What´s the size of your grid"));
+  if (gridSize > 100) {
+    alert("That´s too big");
+    gridSize = parseInt(prompt("Please INsert a valid number"));
+  }
+  return gridSize;
 }
 
 function createGrid(num) {
   // Limpar grade anterior
   container.innerHTML = "";
-
-  // Configurar grid CSS
-  container.style.gridTemplateColumns = `repeat(${num}, 1fr)`;
-  container.style.gridTemplateRows = `repeat(${num}, 1fr)`;
 
   let totalGrids = num * num;
   for (let i = 0; i < totalGrids; i++) {
@@ -21,6 +22,8 @@ function createGrid(num) {
     gridButton.className = "gridButton";
     gridButton.style.width = `${divSize}px`;
     gridButton.style.height = `${divSize}px`;
+    gridButton.style.maxWidth = 500;
+    gridButton.style.maxHeight = 500;
     container.appendChild(gridButton);
   }
 }
@@ -55,13 +58,24 @@ document.querySelectorAll(".header button").forEach((button) => {
 
       case "Clear":
         document.querySelectorAll(".gridButton").forEach((btn) => {
-          btn.style.backgroundColor = "lightblue";
+          btn.style.backgroundColor = "white";
         });
         break;
 
       case "Light mode":
-        document.body.style.backgroundColor =
-          document.body.style.backgroundColor === "black" ? "white" : "black";
+        document.body.style.backgroundImage = "none";
+        document.body.style.backgroundColor = "white";
+        event.target.textContent = "Dark mode";
+        break;
+      case "Dark mode":
+        document.body.style.backgroundImage = "none";
+        document.body.style.backgroundColor = "black";
+        event.target.textContent = "Background";
+        break;
+      case "Background":
+        document.body.style.backgroundImage =
+          'url("/images/navbackground.jpeg")';
+        event.target.textContent = "Light mode";
         break;
     }
   });
