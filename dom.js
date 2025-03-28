@@ -90,7 +90,7 @@ document.querySelectorAll(".header button").forEach((button) => {
 
         break;
       case "Background":
-        document.body.style.backgroundImage = 'url("/images/retro.jpg")';
+        document.body.style.backgroundImage = 'url("images/retro.jpg")';
         event.target.textContent = "Light mode";
         title.style.color = "yellow";
 
