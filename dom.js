@@ -57,8 +57,25 @@ document.querySelectorAll(".header button").forEach((button) => {
         break;
 
       case "Clear":
-        document.querySelectorAll(".gridButton").forEach((btn) => {
-          btn.style.backgroundColor = "white";
+        event.target.textContent = "Random";
+        container.addEventListener("mouseover", (e) => {
+          if (e.target.classList.contains("gridButton")) {
+            e.target.style.backgroundColor = "white";
+          }
+        });
+        break;
+      case "Random":
+        event.target.textContent = "Clear";
+        container.addEventListener("mouseover", (e) => {
+          if (e.target.classList.contains("gridButton")) {
+            e.target.style.backgroundColor = generateRandomRGB();
+          }
+        });
+        break;
+
+      case "Erase":
+        document.querySelectorAll(".gridButton").forEach((cell) => {
+          cell.style.backgroundColor = "white"; // Ou a cor inicial desejada
         });
         break;
 
