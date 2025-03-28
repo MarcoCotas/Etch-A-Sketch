@@ -13,7 +13,6 @@ function getGrid() {
 }
 
 function createGrid(num) {
-  // Limpar grade anterior
   container.innerHTML = "";
 
   let totalGrids = num * num;
