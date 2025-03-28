@@ -7,7 +7,7 @@ function getGrid() {
   gridSize = parseInt(prompt("What´s the size of your grid"));
   if (gridSize > 100) {
     alert("That´s too big");
-    gridSize = parseInt(prompt("Please INsert a valid number"));
+    gridSize = parseInt(prompt("Please Insert a valid number"));
   }
   return gridSize;
 }
@@ -22,8 +22,7 @@ function createGrid(num) {
     gridButton.className = "gridButton";
     gridButton.style.width = `${divSize}px`;
     gridButton.style.height = `${divSize}px`;
-    gridButton.style.maxWidth = 500;
-    gridButton.style.maxHeight = 500;
+
     container.appendChild(gridButton);
   }
 }
@@ -35,17 +34,14 @@ function generateRandomRGB() {
   return `rgb(${r}, ${g}, ${b})`;
 }
 
-// Criar grade inicial
 createGrid(gridSize);
 
-// Event listeners para interação com a grade
 container.addEventListener("mouseover", (e) => {
   if (e.target.classList.contains("gridButton")) {
     e.target.style.backgroundColor = generateRandomRGB();
   }
 });
 
-// Event listeners para botões de ação
 document.querySelectorAll(".header button").forEach((button) => {
   button.addEventListener("click", (event) => {
     const action = event.target.textContent.trim();

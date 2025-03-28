@@ -36,10 +36,18 @@ body {
 
 #container {
   display: flex;
-  box-sizing: border-box;
+  overflow: hidden;
   flex-wrap: wrap;
+
+  box-sizing: border-box;
   max-width: 700px;
   max-height: 700px;
   width: 500px;
   height: 500px;
+}
+
+.gridButton {
+  box-sizing: border-box;
+  border: 2px solid black;
+  opacity: 95%;
 }
