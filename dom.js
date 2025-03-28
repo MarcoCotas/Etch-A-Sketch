@@ -86,8 +86,7 @@ document.querySelectorAll(".header button").forEach((button) => {
         event.target.textContent = "Background";
         break;
       case "Background":
-        document.body.style.backgroundImage =
-          'url("/images/navbackground.jpeg")';
+        document.body.style.backgroundImage = 'url("/images/retro.jpg")';
         event.target.textContent = "Light mode";
         break;
     }

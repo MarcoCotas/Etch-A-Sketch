@@ -15,7 +15,7 @@ body {
   background-size: cover;
   background-position: center;
   width: 100%;
-  background-image: url("/images/navbackground.jpeg");
+  background-image: url("/images/retro.jpg");
 }
 
 .header {
@@ -49,5 +49,5 @@ body {
 .gridButton {
   box-sizing: border-box;
   border: 2px solid black;
-  opacity: 95%;
+  opacity: 90%;
 }
