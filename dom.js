@@ -84,7 +84,7 @@ document.querySelectorAll(".header button").forEach((button) => {
         break;
       case "Dark mode":
         document.body.style.backgroundColor = "black";
-        document.body.style.backgroundImage = 'url("/images/party.jpg")';
+        document.body.style.backgroundImage = 'url("images/party.jpg")';
         event.target.textContent = "Background";
         title.style.color = "white";
 
